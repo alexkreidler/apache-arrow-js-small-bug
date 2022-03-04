@@ -12,9 +12,11 @@ async function main() {
     console.log(tableFromStream.get(0))
 
     console.log(tableFromStream.isValid(0))
+    console.log(tableFromStream.nullCount);
 
     console.log(tableFromStream.indexOf(13));
 
+    console.log(tableFromStream.byteLength);
     console.log(tableFromStream.getByteLength());
     console.log(tableFromStream.__proto__.getByteLength());
     console.log(tableFromStream.getByteLength(1));
