@@ -8,10 +8,16 @@ async function main() {
     
     const tableFromStream = await arrow.tableFromIPC(res.body)
     
+    console.log(tableFromStream.set(0, {FL_DATE: new Date(), DEP_DELAY: 13}));
+    console.log(tableFromStream.get(0))
+
+    console.log(tableFromStream.isValid(0))
+
+    console.log(tableFromStream.indexOf(13));
+
     console.log(tableFromStream.getByteLength());
     console.log(tableFromStream.__proto__.getByteLength());
     console.log(tableFromStream.getByteLength(1));
-    
 }
 
 main()
